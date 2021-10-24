@@ -1,0 +1,32 @@
+Task 1
+
+string = input("Enter string: ")
+string = string.lower()
+stack = []
+
+for letter in string:
+  stack.append(letter)
+  
+print(stack)
+reverse_stack = stack[::-1]
+print(reverse_stack)
+
+if stack == reverse_stack:
+    print('The string is a palindrome.')
+else:
+    print('The string is not a palindrome.)
+
+
+
+Task 2
+
+def Balanced(final_str):
+    brackets = [ '{}','()', '[]']
+    while any(a in final_str for a in brackets):
+        for ax in brackets:
+            final_str = final_str.replace(ax, '')
+    return not final_str
+
+string = "({[{()}]})"
+print(string, "-", "Balanced"
+      if Balanced(string) else "Unbalanced")
